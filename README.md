@@ -1,6 +1,6 @@
 # toba-docker-template
 
-## Levanar el stack
+## Levantar el stack
 docker compose up -d
 
 ## Ingresar al contenedor
