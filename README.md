@@ -43,6 +43,8 @@ Verificar permisos correspondientes en los directorios:
 
 /var/local/docker-data/proyecto
 
+/var/local/docker-data/toba_docker-instalacion
+
 /usr/local/build/vendor/
 
 
