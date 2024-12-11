@@ -37,9 +37,8 @@ Navegar al editor : http://localhost:7008/toba_editor/3.4/
 El directorio  "/var/local/docker-data/proyecto"  se encuentra montado,  se puede descargar el proyecto desde el contenedor (tiene el git instalado) o desde el SO anfitrión.
 ```bash
 source entorno_toba.env
-```
 toba proyecto cargar -p proyecto_toba -d '/var/local/docker-data/proyecto/proyecto_toba'
-
+```
 Verificar permisos correspondientes en los directorios:
 
 /var/local/docker-data/proyecto
