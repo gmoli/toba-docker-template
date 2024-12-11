@@ -21,6 +21,7 @@ PostgreSQL - Puerto (ENTER utilizar�: 5432): 5432
 PostgreSQL - Usuario (ENTER utilizar� postgres): postgres
 PostgreSQL - Clave  (ENTER para usar sin clave): postgres
 ```
+Una vez completada la instalación crear link simbolico en apache:
 
 ```bash
 ln -s /var/local/docker-data/toba_docker-instalacion/toba.conf /etc/apache2/conf.d/toba.conf
