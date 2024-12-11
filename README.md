@@ -14,6 +14,8 @@ docker exec -it toba_docker bash
 ```bash
 bin/toba instalacion instalar
 ```
+(Nota: en la instalación al momento de ingresar host de base de datos se debe completar con: pg)
+
 ```bash
 ln -s /var/local/docker-data/toba_docker-instalacion/toba.conf /etc/apache2/conf.d/toba.conf
 ```
