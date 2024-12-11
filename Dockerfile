@@ -1,8 +1,10 @@
 FROM siudocker/php:8.1-web-v1.0.3
 
 RUN apk --no-cache add \
-    git yarn php81-xmlreader
-
+    git yarn php81-xmlreader \
+    graphviz \
+    openjdk8-jre \
+    nano 
 WORKDIR /usr/local/build
 
 RUN curl -sS "https://getcomposer.org/download/latest-2.x/composer.phar" -o /usr/local/bin/composer
@@ -12,18 +14,10 @@ COPY composer.json /usr/local/build/composer.json
 COPY parameters.yml /usr/local/build/parameters.yml
 
 RUN composer install    
-
 RUN echo -n postgres > /tmp/clave_pg 
 RUN echo -n toba > /tmp/clave_toba
 
-RUN apk --no-cache add \
-    git \
-    yarn \
-    graphviz \
-    openjdk8-jre \
-    nano 
-    
-ENV PHP_MEMORY_LIMIT    2024M
+ENV PHP_MEMORY_LIMIT    2048M
 ENV MAX_UPLOAD          50M
 ENV PHP_MAX_FILE_UPLOAD 200
 ENV PHP_MAX_POST        100M
