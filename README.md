@@ -15,12 +15,12 @@ docker exec -it toba_docker bash
 bin/toba instalacion instalar
 ```
 Nota: en la instalación en referencia a la base de datos ingresar:
-
+```bash
 PostgreSQL - Ubicaci�n (ENTER utilizar� localhost): pg
 PostgreSQL - Puerto (ENTER utilizar�: 5432): 5432
 PostgreSQL - Usuario (ENTER utilizar� postgres): postgres
 PostgreSQL - Clave  (ENTER para usar sin clave): postgres
-
+```
 
 ```bash
 ln -s /var/local/docker-data/toba_docker-instalacion/toba.conf /etc/apache2/conf.d/toba.conf
