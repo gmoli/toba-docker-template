@@ -1,7 +1,7 @@
 FROM siudocker/php:8.1-web-v1.0.3
 
 RUN apk --no-cache add \
-    git yarn php81-xmlreader \
+    git yarn php81-xmlreader php81-ldap\
     graphviz \
     openjdk8-jre \
     nano 
