@@ -55,3 +55,9 @@ Acceso:  localhost:7432
 ```bash
 docker compose down
 ```
+## Configurar valores de php.ini web
+Editar:
+```bash
+80-siu.ini
+```
+
