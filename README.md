@@ -11,10 +11,17 @@ docker compose up -d
 docker exec -it toba_docker bash
 ```
 ## Instalar toba
+Se puede utilizar la instalación utilizando los parametros del archivo parameters.yml (pueden editar el archivo con "nano /usr/local/build/parameters.yml")
+```bash
+bin/toba instalacion_silenciosa instalar --archivo_configuracion /usr/local/build/parameters.yml
+```
+
+También se puede hacer la instalación tradicional ingresando los parametros por pantalla
+
 ```bash
 bin/toba instalacion instalar
 ```
-Nota: en la instalación en referencia a la base de datos ingresar:
+Nota: en la instalación tradicional en referencia a la base de datos ingresar:
 ```bash
 PostgreSQL - Ubicaci�n (ENTER utilizar� localhost): pg
 PostgreSQL - Puerto (ENTER utilizar�: 5432): 5432
