@@ -11,12 +11,27 @@ docker compose up -d
 docker exec -it toba_docker bash
 ```
 ## Instalar toba
+### Opción 1 - Instalacion silenciosa
 Se puede utilizar la instalación utilizando los parametros del archivo parameters.yml (pueden editar el archivo con "nano /usr/local/build/parameters.yml")
 ```bash
 bin/toba instalacion_silenciosa instalar --archivo_configuracion /usr/local/build/parameters.yml
 ```
+Luego cargar los proyectos
+```bash
+bin/toba proyecto cargar -p toba_editor -a 1 && bin/toba proyecto cargar -p toba_usuarios -a 1 && bin/toba proyecto cargar -p toba_referencia -a 1
+```
+Una vez completada la instalación crear link simbolico en apache:
 
-También se puede hacer la instalación tradicional ingresando los parametros por pantalla
+```bash
+ln -s /var/local/docker-data/toba_docker-instalacion/toba.conf /etc/apache2/conf.d/toba.conf
+```
+
+Hace falta reiniciar apache en el contenedor (se puede salir del contenedor con "exit" y luego reiniciar el contenedor "docker restart  toba_docker")
+
+Navegar al editor : http://localhost:7008/toba_editor/3.4/
+
+### Opción 2 - Instalacion tradicional
+Instalación tradicional ingresando los parametros por pantalla
 
 ```bash
 bin/toba instalacion instalar
@@ -34,7 +49,8 @@ Una vez completada la instalación crear link simbolico en apache:
 ln -s /var/local/docker-data/toba_docker-instalacion/toba.conf /etc/apache2/conf.d/toba.conf
 ```
 
-Hace falta reiniciar apache en el contenedor
+
+Hace falta reiniciar apache en el contenedor (se puede salir del contenedor con "exit" y luego reiniciar el contenedor "docker restart  toba_docker")
 
 Navegar al editor : http://localhost:7008/toba_editor/3.4/
 
